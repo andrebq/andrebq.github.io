@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Lato;
+    src: url(./Lato/Lato-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(./Lato/Lato-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(./Lato/Lato-Thin.ttf);
+    font-weight: lighter;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', 'Lucida', 'Sans', 'sans-serif';
+
+    /* https://www.color-hex.com/color-palette/78289
+        Hex	RGB
+    #ffffd7	(255,255,215)
+    #eeee9e	(238,238,158)
+    #d7afff	(215,175,255)
+    #aaffff	(170,255,255)
+    #333335	(51,51,53)
+    */
+    --palette-bg-l: #ffffd7;
+    --palette-bg-d: #eeee9e;
+    --palette-ct-d: #d7afff;
+    --palette-ct-l: #aaffff;
+    --palette-text-l: #333335;
+
+
+    --thick-padding: 1.5rem;
+    --thin-padding: 0.8rem;
+
+    --vspace-xl: 6rem;
+    --vspace-l: 4rem;
+    --vspace-s: 0.8rem;
+    --hspace-m: 3rem;
+
+    --vspace-gallery: 3rem;
+    --hspace-gallery: 6rem;
+
+    --list-line-height: 180%;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    font-size: 24pt;
+    background-color: var(--palette-bg-l);
+    color: var(--palette-text-l);
+}
+
+#root {
+    height: 100vh;
+    width: 100%;
+}
+
+.gallery {
+    height: 100vh;
+    width: 100%;
+    padding: var(--vspace-gallery) var(--hspace-gallery);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.gallery li {
+    line-height: var(--list-line-height);
+}
+
+.gallery p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.gallery h1 {
+    font-size: 2rem;
+}
+
+.gallery h2 {
+    font-size: 1.3rem;
+}
+
+.gallery .first-slide h1, .gallery [data-slide="02"] {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: var(--vspace-xl);
+}
+
+.gallery .first-slide strong {
+    display: block;
+    margin: var(--vspace-s) 0 0 var(--hspace-m);
+}
+
+.gallery .first-slide h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--vspace-l);
+}
+
+.gallery .middle-slide h1 {
+    margin-bottom: var(--vspace-l);
+}
