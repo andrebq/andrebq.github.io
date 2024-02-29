@@ -74,8 +74,8 @@ html, body {
         --thick-padding: 0.8rem;
         --thin-padding: 0.2rem;
 
-        --vspace-xl: 2rem;
-        --vspace-l: 1rem;
+        --vspace-xl: 6rem;
+        --vspace-l: 4rem;
         --vspace-s: 0.2rem;
         --hspace-m: 1rem;
 
@@ -138,12 +138,6 @@ html, body {
     font-size: 1.3rem;
 }
 
-.gallery .first-slide h1, .gallery [data-slide="02"] {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: var(--vspace-xl);
-}
-
 .gallery .first-slide strong {
     display: block;
     margin: var(--vspace-s) 0 0 var(--hspace-m);
@@ -156,4 +150,22 @@ html, body {
 
 .gallery .middle-slide h1 {
     margin-bottom: var(--vspace-l);
+}
+
+.gallery .last-slide h1 {
+    margin-bottom: var(--vspace-xl);
+}
+
+.gallery .last-slide {
+    background-image: url(wfmu-gopher.jpeg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    height: 100%;
+}
+
+.gallery .first-slide {
+    background-image: url(gopher.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    height: 100%;
 }
