@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="assets/htmx.js"></script>
+    <script src="assets/htmx-ext-alpine-morph.js"></script>
+    <script defer src="assets/accept400status.js"></script>
+    <script defer src="assets/alpinejs-morph.js"></script>
+    <script defer src="assets/alpinejs.js"></script>
+    <script src="wasm_exec.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("dist/wasmkv-cli.wasm"), go.importObject).then((result) => {
+                go.run(result.instance);
+        });
+    </script>
+</head>
+
+<body>
+    <form style="
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-items: stretch;
+">
+        <label style="display: flex">
+            WASMKV Server
+            <input id="server" type="text" style="flex-grow: 1">
+        </label>
+        <label style="
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+    ">
+            Code
+            <textarea id="source" style="flex-grow: 1;"></textarea>
+        </label>
+        <button id="run" style="padding: 0.2em; margin: 10px;">Compile and Run</button>
+        <label style="
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+    ">
+            Output
+            <textarea id="output" style="flex-grow: 1;"></textarea>
+        </label>
+    </form>
+</body>
+
+</html>

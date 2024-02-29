@@ -18,7 +18,8 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Lato', 'Lucida', 'Sans', 'sans-serif';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
 
     /* https://www.color-hex.com/color-palette/78289
         Hex	RGB
@@ -49,6 +50,11 @@
     --list-line-height: 180%;
 }
 
+textarea, input, button {
+    font-family: monospace;
+    font-size: 0.99rem;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -58,6 +64,46 @@ html, body {
     font-size: 24pt;
     background-color: var(--palette-bg-l);
     color: var(--palette-text-l);
+}
+
+@media (min-height: 720px) {
+    html, body {
+        font-size: 16pt;
+    }
+    * {
+        --thick-padding: 0.8rem;
+        --thin-padding: 0.2rem;
+
+        --vspace-xl: 2rem;
+        --vspace-l: 1rem;
+        --vspace-s: 0.2rem;
+        --hspace-m: 1rem;
+
+        --vspace-gallery: 1.5rem;
+        --hspace-gallery: 3rem;
+
+        --list-line-height: 180%;
+    }
+}
+
+@media (max-height: 719px) {
+    html, body {
+        font-size: 14pt;
+    }
+    * {
+        --thick-padding: 0.8rem;
+        --thin-padding: 0.2rem;
+
+        --vspace-xl: 2rem;
+        --vspace-l: 1rem;
+        --vspace-s: 0.2rem;
+        --hspace-m: 1rem;
+
+        --vspace-gallery: 1.5rem;
+        --hspace-gallery: 3rem;
+
+        --list-line-height: 180%;
+    }
 }
 
 #root {
